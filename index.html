@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule for Project Task</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 4px;
+        }
+
+        .containar {
+            max-width: 500px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="color"], input[type="date"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 15px;
+            background-color: #c24343b5;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background-color: #6595c9;
+            color: white;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        .deleteRow {
+            background-color: #a3e532;
+            color: rgb(240, 43, 8);
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .colorPicker {
+            width: 100%;
+            padding: 5px;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:rgb(121, 64, 181); display: flex;">Project Task</h1>
+    <div class="containar">
+        <form id="scheduleForm">
+            <label for="projectName">Project Name:</label>
+            <input type="text" id="projectName" name="projectName" placeholder="project name" required>
+    
+            <label for="place">Place:</label>
+            <input type="text" id="place" name="place" placeholder="place" required>
+    
+            <button style="background:rgb(88, 137, 159);width: 100%;" type="submit">Save Project</button>
+        </form>
+    
+        <table id="projectsTable">
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Place</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Saved projects will appear here -->
+            </tbody>
+        </table>
+    </div>
+
+    <table id="taskTable">
+        <thead>
+            <tr id="headerRow1">
+                <th>Task Name</th>
+                <th>Project Leader</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Duration (Days)</th>
+                <th colspan="4">Oct-24</th>
+                <th colspan="4">Nov-24</th>
+                <th colspan="4">Dec-24</th>
+                <th colspan="4">Jan-25</th>
+                <th colspan="4">Feb-25</th>
+                <th colspan="4">Mar-25</th>
+                <th colspan="4">Apr-25</th>
+                <th colspan="4">May-25</th>
+                <th colspan="4">Jun-25</th>
+                <th colspan="4">Jul-25</th>
+                <th colspan="4">Aug-25</th>
+                <th colspan="4">Sep-25</th>
+                <th colspan="4">Oct-25</th>
+                <th colspan="4">Nov-25</th>
+                <th colspan="4">Dec-25</th>
+                <th colspan="4">Jan-26</th>
+                <th colspan="4">Feb-26</th>
+                <th colspan="4">Mar-26</th>
+                <th colspan="4">Arl-26</th>
+                <th colspan="4">May-26</th>
+                <!-- Add more months as needed -->
+            </tr>
+            <tr id="headerRow2">
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Week 1</th>
+                <th>Week 2</th>
+                <th>Week 3</th>
+                <th>Week 4</th>
+                <th>Week 1</th>
+                <th>Week 2</th>
+                <th>Week 3</th>
+                <th>Week 4</th>
+                <th>Week 1</th>
+                <th>Week 2</th>
+                <th>Week 3</th>
+                <th>Week 4</th>
+                <th>Week 1</th>
+                <th>Week 2</th>
+                <th>Week 3</th>
+                <th>Week 4</th>
+                <th>Week 1</th>
+                <th>Week 2</th>
+                <th>Week 3</th>
+                <th>Week 4</th>
+                <th>Week 1</th>
+                <th>Week 2</th>
+                <th>Week 3</th>
+                <th>Week 4</th>
+                <th>Week 1</th>
+                <th>Week 2</th>
+                <th>Week 3</th>
+                <th>Week 4</th>
+                <th>Week 1</th>
+                <th>Week 2</th>
+                <th>Week 3</th>
+                <th>Week 4</th>
+                <th>Week 1</th>
+                <th>Week 2</th>
+                <th>Week 3</th>
+                <th>Week 4</th>
+                <th>Week 1</th>
+                <th>Week 2</th>
+                <th>Week 3</th>
+                <th>Week 4</th>
+                <th>Week 1</th>
+                <th>Week 2</th>
+                <th>Week 3</th>
+                <th>Week 4</th>
+                <th>Week 1</th>
+                <th>Week 2</th>
+                <th>Week 3</th>
+                <th>Week 4</th>
+                <th>Week 1</th>
+                <th>Week 2</th>
+                <th>Week 3</th>
+                <th>Week 4</th>
+                <th>Week 1</th>
+                <th>Week 2</th>
+                <th>Week 3</th>
+                <th>Week 4</th>
+                <th>Week 1</th>
+                <th>Week 2</th>
+                <th>Week 3</th>
+                <th>Week 4</th>
+                <th>Week 1</th>
+                <th>Week 2</th>
+                <th>Week 3</th>
+                <th>Week 4</th>
+                <th>Week 1</th>
+                <th>Week 2</th>
+                <th>Week 3</th>
+                <th>Week 4</th>
+                <th>Week 1</th>
+                <th>Week 2</th>
+                <th>Week 3</th>
+                <th>Week 4</th>
+                <th>Week 1</th>
+                <th>Week 2</th>
+                <th>Week 3</th>
+                <th>Week 4</th>
+                <th>Week 1</th>
+                <th>Week 2</th>
+                <th>Week 3</th>
+                <th>Week 4</th>     
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <button id="addRow">Add Row</button>
+    <button id="saveData">Save Data</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Load data from localStorage
+            if (localStorage.getItem('tableData')) {
+                $('#taskTable tbody').html(localStorage.getItem('tableData'));
+            }
+
+            // Add row functionality
+            $('#addRow').click(function() {
+                let newRow = `<tr>
+                                <td><input type="text" placeholder="Task Name"></td>
+                                <td><input type="text" placeholder="Project Leader"></td>
+                                <td><input type="date" class="startDate"></td>
+                                <td><input type="date" class="endDate"></td>
+                                <td><input type="text" placeholder="Duration"></td>`;
+
+                // Add week columns with color pickers
+                for (let i = 0; i < 80; i++) {
+                    newRow += `<td>
+                                  <input type="color" class="colorPicker" value="#ffffff" />
+                                  <textarea style="height: 30px; width:60px;" placeholder=""></textarea>
+                               </td>`;
+                }
+
+                newRow += `<td><button class="deleteRow">Delete</button></td></tr>`;
+                $('#taskTable tbody').append(newRow);
+            });
+
+            // Save data to localStorage
+            $('#saveData').click(function() {
+                const tableData = $('#taskTable tbody').html();
+                localStorage.setItem('tableData', tableData);
+                alert("Data saved!");
+            });
+
+            // Delete row functionality
+            $(document).on('click', '.deleteRow', function() {
+                $(this).closest('tr').remove();
+            });
+
+            // Change cell color when color picker changes
+            $(document).on('input', '.colorPicker', function() {
+                const color = $(this).val();
+                $(this).closest('td').css('background-color',color);
+            });
+        });
+
+$(document).ready(function() {
+    $('#scheduleForm').on('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Get values from the form
+        var projectName = $('#projectName').val();
+        var place = $('#place').val();
+
+        // Append a new row to the projects table
+        $('#projectsTable tbody').append(
+            `<tr>
+                <td>${projectName}</td>
+                <td>${place}</td>
+                <td><button class="deleteBtn">Delete</button></td>
+            </tr>`
+        );
+
+        // Clear the form fields
+        $('#projectName').val('');
+        $('#place').val('');
+    });
+
+    // Delegate delete button click event
+    $('#projectsTable').on('click', '.deleteBtn', function() {
+        $(this).closest('tr').remove(); // Remove the row
+    });
+});
+
+
+    </script>
+</body>
+</html>
